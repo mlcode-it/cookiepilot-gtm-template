@@ -103,7 +103,10 @@ if (cookieValues && cookieValues.length > 0) {
   }
 }
 
-const scriptUrl = CDN_URL + '?cpkey=' + encodeUriComponent(data.apiKey);
+// ver=2: one-time url change. Builds before 2026-11 were served with a
+// one-year immutable cache under the old url; a new url makes browsers
+// fetch the current widget once the template is updated.
+const scriptUrl = CDN_URL + '?cpkey=' + encodeUriComponent(data.apiKey) + '&ver=2';
 injectScript(scriptUrl, data.gtmOnSuccess, data.gtmOnFailure, 'cookiepilot-cmp-' + data.apiKey);
 
 
