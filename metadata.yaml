@@ -1,5 +1,7 @@
 homepage: "https://cookiepilot.io"
 documentation: "https://cookiepilot.io/en/integrations/google-tag-manager?utm_source=gtm-gallery&utm_medium=marketplace&utm_content=gallery-docs"
 versions:
+  - sha: 4aef45cc2495bf0e1028e8c7b3ba767b1d54016d
+    changeNotes: Loads the CookiePilot banner script from a new address once, so visitors whose browser cached an older banner get the current version.
   - sha: 2690fea20b7cf5ea15af1b550a314fc63b0e6a17
     changeNotes: Initial release. Sets Google Consent Mode v2 defaults, restores a returning visitor's choice and loads the CookiePilot banner.
